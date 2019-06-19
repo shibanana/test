@@ -6,9 +6,27 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+    <div >
+        <input id="origin-input" class="controls" type="text"
+            placeholder="Enter an origin location">
+
+        <input id="destination-input" class="controls" type="text"
+            placeholder="Enter a destination location">
+
+        <div id="mode-selector" class="controls">
+          <input type="radio" name="type" id="changemode-walking" checked="checked">
+          <label for="changemode-walking">Walking</label>
+
+          <input type="radio" name="type" id="changemode-transit">
+          <label for="changemode-transit">Transit</label>
+
+          <input type="radio" name="type" id="changemode-driving">
+          <label for="changemode-driving">Driving</label>
+        </div>
+    </div>
+    <button (click)='createMap()'>create</button>
+  <div style='height: 100%; width: 100%;' id="map"> 
+    
+ </div>
 </ion-content>
